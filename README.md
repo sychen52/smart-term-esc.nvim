@@ -1,0 +1,1 @@
+# smart-term-esc.nvim
