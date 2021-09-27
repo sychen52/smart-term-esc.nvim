@@ -1,6 +1,6 @@
 # smart-term-esc.nvim
 
-Many people really want to do "tnoremap <Esc> <C-\><C-n>". However, these is a few command line utilties they rely on also use <Esc>. This is a plugin that let you map <Esc to <C-\><C-n> except when these command line utilties are running in the termial.
+Many people really want to do `tnoremap <Esc> <C-\><C-n>`. However, there is a few command line utilties they rely on also use `<Esc>`. This is a plugin that let you map `<Esc>` to `<C-\><C-n>` except when these command line utilties are running in the termial.
 
 It is built based on [justinmk's reply](https://github.com/neovim/neovim/issues/7648#issuecomment-917390258).
 
@@ -16,12 +16,8 @@ require('smart-term-esc').setup{
     except={'nvim', 'fzf'}
 }
 ```
-```lua
-key
-```
-is what you want to map to <C-\><C-n>.
+`key` is what you want to map to `<C-\><C-n>`.
 
-```lua
-except
-```
-is a list of processes. Once any of them is running in the terminal, the key will not be mapped.
+`except` is a list of processes. Once any of them is running in the terminal, the key will not be mapped.
+
+By default, `key='<Esc>', except={'nvim'}`.
